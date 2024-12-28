@@ -8,7 +8,13 @@ function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	const lists = ['Home', 'About', 'Skill', 'Project', 'Certificates']
-	const logos = [githubLogo, linkedinLogo]
+	const socials = [
+		{ img: githubLogo, href: 'https://github.com/HamdiHarahap' },
+		{
+			img: linkedinLogo,
+			href: 'https://www.linkedin.com/in/hamdi-harahap-a633a8292/',
+		},
+	]
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -38,8 +44,10 @@ function Navbar() {
 		</li>
 	))
 
-	const logo = logos.map((logo) => (
-		<img className="w-4" key={logo} src={logo} alt="Logo" />
+	const social = socials.map((social, index) => (
+		<a key={index} href={social.href}>
+			<img className="w-4" key={social} src={social.img} alt="Logo" />
+		</a>
 	))
 
 	return (
@@ -56,7 +64,7 @@ function Navbar() {
 				{list}
 			</ul>
 			<div className="flex justify-between">
-				<div className="flex gap-6">{logo}</div>
+				<div className="flex gap-6">{social}</div>
 				<img
 					src={menuIcon}
 					className="w-7 max-[520px]:flex hidden cursor-pointer"
