@@ -1,0 +1,26 @@
+.splide__arrow {
+	background: transparent;
+	color: white;
+}
+
+.splide__arrow svg {
+	fill: white;
+}
+
+.splide__arrow--prev {
+	left: -2rem;
+}
+
+.splide__arrow--next {
+	right: -2rem;
+}
+
+@media screen and (max-width: 520px) {
+	.splide__arrow--next {
+		right: -1rem;
+	}
+
+	.splide__arrow--prev {
+		left: -1rem;
+	}
+}
