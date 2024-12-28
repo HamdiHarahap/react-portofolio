@@ -6,11 +6,14 @@ import selfImage from '../assets/images/self.png'
 import Button from './Button'
 
 function Hero() {
-	const logos = [instagramLogo, whatsappLogo]
-	const logo = logos.map((item, index) => (
-		<a href="" key={index}>
+	const socials = [
+		{ img: instagramLogo, href: 'https://www.instagram.com/hhmdi_/' },
+		{ img: whatsappLogo, href: '' },
+	]
+	const social = socials.map((item, index) => (
+		<a href={item.href} key={index}>
 			<img
-				src={item}
+				src={item.img}
 				alt="Logo"
 				className="w-10 bg-slate-500 bg-opacity-25 p-2 rounded-full cursor-pointer"
 			/>
@@ -40,7 +43,7 @@ function Hero() {
 					</p>
 					<div className="flex gap-4 items-center">
 						<Button text="Hire me" logo={mailLogo} />
-						<div className="flex gap-5">{logo}</div>
+						<div className="flex gap-5">{social}</div>
 					</div>
 				</div>
 				<div>
