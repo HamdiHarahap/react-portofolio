@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import githubLogo from '../assets/logo/github.svg'
-import linkedinLogo from '../assets/logo/linkedin.svg'
-import menuIcon from '../assets/logo/menu.svg'
+import githubLogo from '../../assets/logo/github.svg'
+import linkedinLogo from '../../assets/logo/linkedin.svg'
+import menuIcon from '../../assets/logo/menu.svg'
 
 function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false)

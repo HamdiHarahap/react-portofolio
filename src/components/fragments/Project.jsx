@@ -1,43 +1,44 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
-import '../style/project.css'
+import '../../style/project.css'
 
-import note from '../assets/images/note.png'
-import notes from '../assets/images/notes.png'
-import slots from '../assets/images/slots.png'
-import khodam from '../assets/images/khodam.png'
-import bookshelf from '../assets/images/bookshelf.png'
-import qrgen from '../assets/images/qrgen.png'
+import note from '../../assets/images/note.png'
+import notes from '../../assets/images/notes.png'
+import slots from '../../assets/images/slots.png'
+import khodam from '../../assets/images/khodam.png'
+import bookshelf from '../../assets/images/bookshelf.png'
+import qrgen from '../../assets/images/qrgen.png'
+import ImageHover from '../elements/hover/ImageHover'
 
 function Project() {
 	const projects = [
 		{
-			src: bookshelf,
+			logo: bookshelf,
 			label: 'Bookshelf App: Manage your personal library',
 			href: 'https://github.com/HamdiHarahap/bookshelf-apps',
 		},
 		{
-			src: note,
+			logo: note,
 			label: 'Simple Note Keeper: Lightweight note-taking app',
 			href: 'https://github.com/HamdiHarahap/note-app',
 		},
 		{
-			src: notes,
+			logo: notes,
 			label: 'Advanced Notes Manager: Organize and categorize your notes',
 			href: 'https://github.com/HamdiHarahap/notes-app',
 		},
 		{
-			src: slots,
+			logo: slots,
 			label: 'Slot Machine Game: Try your luck with virtual slots',
 			href: 'https://github.com/HamdiHarahap/slots',
 		},
 		{
-			src: khodam,
+			logo: khodam,
 			label: 'Khodam Checker: Web to check your Khodam',
 			href: 'https://github.com/HamdiHarahap/cek-khodam',
 		},
 		{
-			src: qrgen,
+			logo: qrgen,
 			label: 'QR Code Generator: Generate and customize QR codes',
 			href: 'https://github.com/HamdiHarahap/qr-generator',
 		},
@@ -76,23 +77,11 @@ function Project() {
 				>
 					{projects.map((project, index) => (
 						<SplideSlide key={index}>
-							<div className="group bg-[#353543] rounded-lg flex justify-center items-center p-4 h-[15rem]">
-								<img
-									src={project.src}
-									alt=""
-									className="w-[22rem] h-full object-contain transition-transform duration-300 group-hover:scale-105"
-								/>
-								<div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white text-xl font-semibold bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-									<h2 className="">{project.label}</h2>
-									<a
-										href={project.href}
-										target="_blank"
-										className="text-amber-500 font-semibold"
-									>
-										View -{'>'}
-									</a>
-								</div>
-							</div>
+							<ImageHover
+								images={[project]}
+								containerClass="group bg-[#353543] rounded-lg flex justify-center items-center p-4 h-[15rem]"
+								imgClass="w-[22rem] h-full object-contain transition-transform duration-300 group-hover:scale-105"
+							/>
 						</SplideSlide>
 					))}
 				</Splide>

@@ -1,9 +1,9 @@
-import mailLogo from '../assets/logo/mail.svg'
-import instagramLogo from '../assets/logo/instagram.svg'
-import whatsappLogo from '../assets/logo/whatsapp.svg'
-import selfImage from '../assets/images/self.png'
+import mailLogo from '../../assets/logo/mail.svg'
+import instagramLogo from '../../assets/logo/instagram.svg'
+import whatsappLogo from '../../assets/logo/whatsapp.svg'
+import selfImage from '../../assets/images/self.png'
 
-import Button from './Button'
+import Button from '../elements/button/Button'
 
 function Hero() {
 	const socials = [

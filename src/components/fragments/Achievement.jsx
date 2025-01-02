@@ -1,34 +1,35 @@
-import js from '../assets/images/js.png'
-import web from '../assets/images/web.png'
-import frontend from '../assets/images/frontend.png'
-import react from '../assets/images/react.png'
-import backend from '../assets/images/backend.png'
-import bg from '../assets/images/bg.jpg'
+import js from '../../assets/images/js.png'
+import web from '../../assets/images/web.png'
+import frontend from '../../assets/images/frontend.png'
+import react from '../../assets/images/react.png'
+import backend from '../../assets/images/backend.png'
+import bg from '../../assets/images/bg.jpg'
+import ImageHover from '../elements/hover/ImageHover'
 
 function Achievement() {
 	const images = [
 		{
-			src: web,
+			logo: web,
 			label: 'Sertifikat Web Dasar',
 			href: 'https://www.dicoding.com/certificates/MRZM81G2KZYQ',
 		},
 		{
-			src: js,
+			logo: js,
 			label: 'Sertifikat Javascript',
 			href: 'https://www.dicoding.com/certificates/1OP8N970VXQK',
 		},
 		{
-			src: frontend,
+			logo: frontend,
 			label: 'Sertifikat Frontend',
 			href: 'https://www.dicoding.com/certificates/4EXGK0O6DZRL',
 		},
 		{
-			src: react,
+			logo: react,
 			label: 'Sertifikat React',
 			href: 'https://www.dicoding.com/certificates/QLZ9VJ48EX5D',
 		},
 		{
-			src: backend,
+			logo: backend,
 			label: 'Sertifikat Backend',
 			href: 'https://www.dicoding.com/certificates/1RXY28471XVM',
 		},
@@ -50,25 +51,12 @@ function Achievement() {
 						</h1>
 						<div className="bg-amber-500 h-1 w-[10rem]"></div>
 					</div>
-					<div className="flex justify-center flex-wrap gap-[3rem]">
-						{images.map((image, index) => (
-							<div
-								key={index}
-								className="group bg-[#2d2d39] p-6 rounded-lg relative overflow-hidden"
-							>
-								<a href={image.href} target="_blank">
-									<img
-										src={image.src}
-										alt={image.label}
-										className="w-[20rem] transition-transform duration-300 group-hover:scale-110"
-									/>
-									<h2 className="absolute inset-0 flex items-center justify-center text-white text-2xl font-semibold bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-										{image.label}
-									</h2>
-								</a>
-							</div>
-						))}
-					</div>
+					<ImageHover
+						images={images}
+						parentClass="flex justify-center flex-wrap gap-[3rem]"
+						imgClass="w-[20rem] transition-transform duration-300 group-hover:scale-110"
+						containerClass="group bg-[#2d2d39] p-6 rounded-lg relative overflow-hidden"
+					/>
 				</div>
 			</div>
 		</>

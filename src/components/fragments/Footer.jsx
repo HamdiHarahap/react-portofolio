@@ -1,8 +1,8 @@
-import github from '../assets/logo/github.svg'
-import linkedin from '../assets/logo/linkedin.svg'
-import instagram from '../assets/logo/instagram-light.svg'
-import mail from '../assets/logo/mail.svg'
-import whatsapp from '../assets/logo/whatsapp-light.svg'
+import github from '../../assets/logo/github.svg'
+import linkedin from '../../assets/logo/linkedin.svg'
+import instagram from '../../assets/logo/instagram-light.svg'
+import mail from '../../assets/logo/mail.svg'
+import whatsapp from '../../assets/logo/whatsapp-light.svg'
 
 function Footer() {
 	const socials = [
