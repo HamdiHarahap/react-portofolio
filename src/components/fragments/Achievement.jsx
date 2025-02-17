@@ -47,7 +47,7 @@ function Achievement() {
 				<div className="relative z-10 flex flex-col items-center gap-10">
 					<div className="flex flex-col justify-center items-center">
 						<h1 className="text-white text-4xl font-semibold mb-6 text-center">
-							Gallery Sertificate
+							Certificate Gallery
 						</h1>
 						<div className="bg-amber-500 h-1 w-[10rem]"></div>
 					</div>

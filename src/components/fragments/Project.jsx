@@ -52,7 +52,7 @@ function Project() {
 			>
 				<div className="flex flex-col justify-center items-center">
 					<h1 className="text-white text-4xl font-semibold mb-6 text-center">
-						My Project
+						My Projects
 					</h1>
 					<div className="bg-amber-500 h-1 w-[10rem]"></div>
 				</div>
